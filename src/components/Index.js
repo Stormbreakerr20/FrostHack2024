@@ -1,15 +1,5 @@
-import React from 'react';
+import React from "react";
 export const Index = (props) => {
-
-  React.useEffect(() => {
-    const devfolioscript = document.createElement('script');
-    devfolioscript.src = 'https://apply.devfolio.co/v2/sdk.js';
-    devfolioscript.async = true;
-    devfolioscript.defer = true;
-    document.body.appendChild(devfolioscript);
-    return ()=>{ document.body.removeChild(devfolioscript); }
-  })
-
   return (
     <div>
       {/* Home */}
@@ -28,17 +18,30 @@ export const Index = (props) => {
                   <div className="home-content">
                     <h1>
                       {/* frosthack */}
-                      <img id="frosthacklogo" src="./img/logos/wide-white.png" style={{width: '70%'}} />
+                      <img
+                        id="frosthacklogo"
+                        src="./img/logos/wide-white.png"
+                        style={{ width: "70%" }}
+                      />
                     </h1>
-                    <h4 className="lead" style={{marginBottom: 100}}>
+                    <h4 className="lead" style={{ marginBottom: 100 }}>
                       <i className="fas fa-map-marker-alt"> IIT Mandi</i>
                       <br />
-                      <i className="fas fa-calendar-day"> 3rd March - 5th March 2023</i>
+                      <i className="fas fa-calendar-day">
+                        {" "}
+                        29th March - 31st March 2025
+                      </i>
                     </h4>
-                    
+
                     {/* <a rel="noreferrer" href="https://discord.com/invite/Vq9FwuCnmb" className="cta-button-hero"><img src="./img/discord.png" alt="" /></a> */}
-                    <div> <br /> </div>
-                    <div> <br /> </div>
+                    <div>
+                      {" "}
+                      <br />{" "}
+                    </div>
+                    <div>
+                      {" "}
+                      <br />{" "}
+                    </div>
                     {/* <div className="apply-button" data-hackathon-slug="frosthack2021" data-button-theme="light" style={{ height: '44px', width: '312px' }} /> */}
                   </div>
                 </div>
@@ -60,45 +63,60 @@ export const Index = (props) => {
           <div className="row">
             {/* section title */}
             <div className="section-title">
-              <h3 className="title"><span>About</span> <span style={{ color: '#dd0a37' }}>Event</span></h3>
+              <h3 className="title">
+                <span style={{ color: "white" }}>About</span>{" "}
+                <span style={{ color: "#dd0a37" }}>Event</span>
+              </h3>
             </div>
             {/* /section title */}
             <div className="col-md-8 col-md-offset-2 text-center">
               {/* about content */}
-              <div className="about-content">
+              <div style={{ color: "white" }} className="about-content">
                 <p className="changecolor">
-                The student community of IIT Mandi is organizing FrostHack, an Open Hackathon, to solve societal problems through collaborative efforts among students using technology. 
-The event aims to foster teamwork and innovation, encouraging participants to develop tech-based solutions for real-world issues. 
-</p><p>
-The ultimate goal is to create impactful solutions and cultivate a culture of innovation and community engagement among the participants.
+                  The student community of IIT Mandi is organizing FrostHack, an
+                  Open Hackathon, to solve societal problems through
+                  collaborative efforts among students using technology. The
+                  event aims to foster teamwork and innovation, encouraging
+                  participants to develop tech-based solutions for real-world
+                  issues.
+                </p>
+                <p>
+                  The ultimate goal is to create impactful solutions and
+                  cultivate a culture of innovation and community engagement
+                  among the participants.
                 </p>
               </div>
-              
+            </div>
+            <div className="container">
+              <div className="download-btn">
+                <a
+                  href="https://www.xpecto.org/competitions/frosthack"
+                  target="_blank"
+                  className="main-btn"
+                  style={{ marginTop: 40 }}
+                >
+                  See event on Xpecto
+                </a>
               </div>
-              <div className="container">
-                <div className="download-btn">
-                  <a href="https://xpecto.tech/events/63dbf9a5de4b0c5e13d1befb" target="_blank" className="main-btn" style={{ marginTop: 40}}>See event on Xpecto</a>
-                </div>
-                <div className="download-btn">
-                  <a href="https://drive.google.com/file/d/1Z-plS6Lnf29EV-ph3diEoqvIdABiklhQ/view?usp=drivesdk" target="_blank" className="main-btn"  style={{marginBottom: 40}}>See Themes</a>
-                </div>
               {/* /about content */}
             </div>
           </div>
-          <div 
-            className="apply-button" 
-            data-hackathon-slug="frosthack-2k23" 
+          <div
+            className="apply-button"
+            data-hackathon-slug="frosthack-2k23"
           ></div>
           {/* row */}
         </div>
         {/* /container */}
         {/* container */}
-        <div className="container" style={{ paddingTop: '4em' }}>
+        <div className="container" style={{ paddingTop: "4em" }}>
           {/* row */}
           <div className="row tracks">
             {/* section title */}
             <div className="section-title">
-              <h5 className="title"><span>Tracks</span> </h5>
+              <h5 className="title">
+                <span style={{ color: "white" }}>Tracks</span>{" "}
+              </h5>
             </div>
             {/* /section title */}
             {/* track */}
@@ -126,46 +144,83 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
             </div>
             {/* /track */}
             {/* track */}
-            <div className="col-sm-4">
-              <div className="track">
-                <img src="img/iot.svg" alt="" />
-                <h3 className="mt-3">Internet of things</h3>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                width: "100%",
+                justifyContent: "center",
+                color: "white",
+                gap: "8rem",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  margin: "10px",
+                }}
+              >
+                <div className="track">
+                  <img src="img/iot.svg" alt="" />
+                  <h3 style={{ marginTop: "12px", color: "white" }}>
+                    Robotics & ROS
+                  </h3>
+                </div>
+              </div>
+              {/* /track */}
+              {/* track */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  margin: "10px",
+                }}
+              >
+                <div className="track">
+                  <img src="img/web.svg" alt="" />
+                  <h3 style={{ marginTop: "12px", color: "white" }}>Web</h3>
+                </div>
               </div>
             </div>
-            {/* /track */}
-            {/* track */}
-            <div className="col-sm-4">
-              <div className="track">
-                <img src="img/web.svg" alt="" />
-                <h3 className="mt-3">Web</h3>
-              </div>
-            </div>
-            {/* /track */}
-            {/* track */}
-            <div className="col-sm-4">
-              <div className="track">
-                <img src="img/ar-glasses.svg" alt="" />
-                <h3 className="mt-3">AR/VR</h3>
-              </div>
-            </div>
+
             {/* /track */}
           </div>
           {/* /row */}
         </div>
         {/* /container */}
         {/* container */}
-        <div className="container" style={{ paddingTop: '4em' }}>
+        <div className="container" style={{ paddingTop: "4em" }}>
           {/* row */}
           <div className="row tracks">
             {/* section title */}
             <div className="section-title">
-              <h5 className="title"><span>Prizes</span> </h5>
+              <h5 className="title">
+                <span style={{ color: "white" }}>Prizes</span>{" "}
+              </h5>
             </div>
             <div className="col-md-8 col-md-offset-2 text-center">
               {/* about content */}
+              <img
+                style={{
+                  height: "500px",
+                  width: "500px",
+                  borderRadius: "2rem",
+                }}
+                src="/img/Frosthack.jpg"
+                alt=""
+              />
+              {/* /about content */}
+            </div>
+            <div className="col-md-8 col-md-offset-2 text-center mt-3">
+              {/* about content */}
               <div className="about-content">
-                <p className="changecolor">
-                  Prizes worth 1.25 lacs + to be won
+                <p style={{ color: "white" }} className="changecolor">
+                  Prizes worth 2.5 Lacs+ to be won
                 </p>
               </div>
               {/* /about content */}
@@ -252,131 +307,39 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
             <div className="row sponbox">
               {/* section title */}
               <div className="section-title">
-                <h3 className="title"><span>Our </span> <span style={{ color: '#dd0a37' }}>Sponsors</span></h3>
+                <h3 className="title">
+                  <span style={{ color: "white" }}>Our </span>{" "}
+                  <span style={{ color: "#dd0a37" }}>Sponsors</span>
+                </h3>
               </div>
               {/* /section title */}
             </div>
-            <h3
-              className="text-center changecolor"
-              style={{
-                marginTop: "70px",
-                marginBottom: "40px",
-                fontSize: "30px",
-                color: 'white'
-              }}
-            >
-              Diamond Sponsors
-            </h3>
             <div className="spon-diamond">
               <div className="track sponsor">
-                <a rel="noreferrer" href="https://devfolio.co/" target="_blank">
-                  <div className="img">
-                    <img src="img/spons/Devfolio2x.png" alt="" />
-                  </div>
-                </a>
+                <div className="img">
+                  <img src="img/spons/fetch.png" alt="" />
+                </div>
               </div>
               <div className="track sponsor">
-                <a rel="noreferrer" href="https://polygon.technology/" target="_blank">
-                  <div className="img">
-                    <img src="img/spons/Polygon2.png" alt="" />
-                  </div>
-                </a>
+                <div className="img">
+                  <img src="img/spons/pathway.png" alt="" />
+                </div>
               </div>
               <div className="track sponsor">
-                <a rel="noreferrer" href="https://ihubiitmandi.in/" target="_blank">
-                  <div className="img-fluid">
-                    <img src="img/spons/ihub.png" alt="" style={{width: 200, height: 200}} />
-                  </div>
-                </a>
+                <div className="img">
+                  <img src="img/spons/qi.png" alt="" />
+                </div>
               </div>
-            </div>
-          </div>
-          <h3
-            className="text-center changecolor"
-            style={{
-              marginTop: "70px",
-              marginBottom: "40px",
-              fontSize: "30px",
-              color: 'white'
-            }}
-          >
-            Platinum Sponsors
-          </h3>
-          <div className="spon-diamond">
-            <div className="track sponsor">
-              <a rel="noreferrer" href="https://replit.com/" target="_blank">
-                <div className="img-fluid img">
-                  <img src="img/spons/replit.png" alt="" style={{height: 90}} />
+              <div className="track sponsor">
+                <div className="img">
+                  <img src="img/spons/rig.png" alt="" />
                 </div>
-              </a>
-            </div>
-            <div className="track sponsor">
-              <a rel="noreferrer" href="https://filecoin.io/" target="_blank">
-                <div className="img m-auto">
-                  <img src="img/spons/filecoin.png" alt="" style={{ height: 90}} />
+              </div>
+              <div className="track sponsor">
+                <div className="img">
+                  <img src="img/spons/spheron.png" alt="" />
                 </div>
-              </a>
-            </div>
-            <div className="track sponsor">
-              <a rel="noreferrer" href="https://solana.com/" target="_blank">
-                <div className="img-fluid img">
-                  <img src="img/spons/solana.png" alt="" style={{height: 40}}  />
-                </div>
-              </a>
-            </div>
-          </div>
-          <h3
-            className="text-center changecolor"
-            style={{
-              marginTop: "70px",
-              marginBottom: "40px",
-              fontSize: "30px",
-              color: 'white'
-            }}
-          >
-          Gold Sponsors
-          </h3>
-          <div className="spon-diamond">
-            <div className="track sponsor">
-              <a rel="noreferrer" href="https://hoverrobotix.com/" target="_blank">
-                <div className="img-fluid">
-                  <img src="img/spons/hoverRobotix.png" alt="" style={{width: 200, height: 200}} />
-                </div>
-              </a>
-            </div>
-            <div className="track sponsor">
-              <a rel="noreferrer" href="https://thementorx.com/" target="_blank">
-                <div className="img-fluid">
-                  <img src="img/spons/mentorx.png" alt="" style={{height: 200}} />
-                </div>
-              </a>
-            </div>
-            <div className="track sponsor">
-              <a rel="noreferrer" href="http://nancyjuneja.com/rev-up-life-skill/" target="_blank">
-                <div className="img-fluid">
-                  <img src="img/spons/revup.jfif" alt="" style={{height: 200}} />
-                </div>
-              </a>
-            </div>
-          </div>
-          <h3
-            className="text-center changecolor"
-            style={{
-              marginTop: "70px",
-              marginBottom: "40px",
-              fontSize: "30px",
-              color: 'white'
-            }}
-          >
-          AR/VR Development Partner
-          </h3>
-          <div className="spon-diamond">
-            <div className="track sponsor">
-              <a rel="noreferrer" href="https://www.echo3d.com/" target="_blank">
-                <div className="img-fluid">
-                  <img src="img/spons/echo.jfif" alt="" />
-                </div>
-              </a>
+              </div>
             </div>
           </div>
           {/* container */}
@@ -562,11 +525,6 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
           </div>
           {/* container */}
           {/* container */}
-          <div className="container">
-            <div className="download-btn">
-              <a rel="noreferrer" href="./files/spon.pdf" target="_blank" className="main-btn" style={{marginBottom:40}}>Sponsor Us</a>
-            </div>
-          </div>
           {/* /container */}
         </div>
         {/* /Sponsors */}
@@ -578,22 +536,44 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
             <div className="row">
               {/* section title */}
               <div className="section-title">
-                <h3 className="title"><span>Frequent </span> <span style={{ color: '#dd0a37' }}>Questions</span></h3>
+                <h3 className="title">
+                  <span style={{ color: "white" }}>Frequent </span>{" "}
+                  <span style={{ color: "#dd0a37" }}>Questions</span>
+                </h3>
               </div>
               {/* /section title */}
               {/* Questions */}
               <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div className="faq">
-                  <div className="panel-group" id="accordion-left" role="tablist" aria-multiselectable="true">
+                  <div
+                    className="panel-group"
+                    id="accordion-left"
+                    role="tablist"
+                    aria-multiselectable="true"
+                  >
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-left" href="#collapse1st" aria-expanded="false" aria-controls="collapse1st">
-                            Should team members be of the same college or people of different colleges forming a team would also do ?
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-left"
+                            href="#collapse1st"
+                            aria-expanded="false"
+                            aria-controls="collapse1st"
+                          >
+                            Should team members be of the same college or people
+                            of different colleges forming a team would also do ?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse1st" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div
+                        id="collapse1st"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingOne"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
                             Yes, team members can be from different colleges
@@ -604,18 +584,34 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-right" href="#collapse7th" aria-expanded="false" aria-controls="collapse4th">
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-right"
+                            href="#collapse7th"
+                            aria-expanded="false"
+                            aria-controls="collapse4th"
+                          >
                             Is there any registration fee for the hackathon?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse7th" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div
+                        id="collapse7th"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingOne"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
-                            No, there is no registration fee for FrostHack. However, participants will
-                            need to cover the accommodation cost, which is Rs1700. This fee covers
-                            three days of accommodation, food, event participation, and Pro Night. 
-                            For additional information, please visit https://xpecto.tech/payment-info.
+                            No, there is no registration fee for FrostHack.
+                            However, participants will need to cover the
+                            accommodation cost, which is Rs1700. This fee covers
+                            three days of accommodation, food, event
+                            participation, and Pro Night. For additional
+                            information, please visit
+                            https://xpecto.tech/payment-info.
                           </p>
                         </div>
                       </div>
@@ -623,18 +619,33 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-left" href="#collapse6th" aria-expanded="false" aria-controls="collapse6th">
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-left"
+                            href="#collapse6th"
+                            aria-expanded="false"
+                            aria-controls="collapse6th"
+                          >
                             Can I start working on my hack before the event?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse6th" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div
+                        id="collapse6th"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingOne"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
-                            No. In the interest of fairness, students should not be working on their
-                            projects before FROSTHACK begins and we do not allow participants to work on
-                            pre-existing projects. However, you can familiarize yourself with all the
-                            tools and technologies you intend to use beforehand!
+                            No. In the interest of fairness, students should not
+                            be working on their projects before FROSTHACK begins
+                            and we do not allow participants to work on
+                            pre-existing projects. However, you can familiarize
+                            yourself with all the tools and technologies you
+                            intend to use beforehand!
                           </p>
                         </div>
                       </div>
@@ -642,15 +653,28 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-left" href="#collapse2nd" aria-expanded="false" aria-controls="collapse2nd">
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-left"
+                            href="#collapse2nd"
+                            aria-expanded="false"
+                            aria-controls="collapse2nd"
+                          >
                             Is this hackathon an online event or offline?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse2nd" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div
+                        id="collapse2nd"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingTwo"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
-                            The event will be offline.
+                            The event will be hybrid.
                           </p>
                         </div>
                       </div>
@@ -701,21 +725,40 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
               {/* Questions */}
               <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div className="faq">
-                  <div className="panel-group" id="accordion-right" role="tablist" aria-multiselectable="true">
+                  <div
+                    className="panel-group"
+                    id="accordion-right"
+                    role="tablist"
+                    aria-multiselectable="true"
+                  >
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-right" href="#collapse4th" aria-expanded="false" aria-controls="collapse4th">
-                            Who will own the IP (Intellectual Property) Rights to the product that I
-                            have built?
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-right"
+                            href="#collapse4th"
+                            aria-expanded="false"
+                            aria-controls="collapse4th"
+                          >
+                            Who will own the IP (Intellectual Property) Rights
+                            to the product that I have built?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse4th" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div
+                        id="collapse4th"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingOne"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
-                            The developer/developers of the application will have all rights and own the
-                            IP of the product. However, all code needs to be in public domain (open
+                            The developer/developers of the application will
+                            have all rights and own the IP of the product.
+                            However, all code needs to be in public domain (open
                             source) so that it can be evaluated by the judges.
                           </p>
                         </div>
@@ -724,16 +767,30 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-right" href="#collapse9th" aria-expanded="false" aria-controls="collapse4th">
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-right"
+                            href="#collapse9th"
+                            aria-expanded="false"
+                            aria-controls="collapse4th"
+                          >
                             I am a beginner, Can I participate?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse9th" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div
+                        id="collapse9th"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingOne"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
-                            Without a doubt! Our mentors will be available to provide assistance. 
-                            Join us at FrostHack to learn and participate in your first-ever hackathon.
+                            Without a doubt! Our mentors will be available to
+                            provide assistance. Join us at FrostHack to learn
+                            and participate in your first-ever hackathon.
                           </p>
                         </div>
                       </div>
@@ -741,16 +798,30 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-right" href="#collapse5th" aria-expanded="false" aria-controls="collapse5th">
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-right"
+                            href="#collapse5th"
+                            aria-expanded="false"
+                            aria-controls="collapse5th"
+                          >
                             What is the team size ?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse5th" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div
+                        id="collapse5th"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingTwo"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
                             Every team can have min 1 and max 4 members.
-                          </p></div>
+                          </p>
+                        </div>
                       </div>
                     </div>
                     {/* <div class="panel panel-default">
@@ -777,17 +848,32 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
                     <div className="panel panel-default">
                       <div className="panel-heading" role="tab">
                         <h3 className="panel-title">
-                          <a rel="noreferrer" className="collapsed changecolor" data-toggle="collapse" data-parent="#accordion-right" href="#collapse8th" aria-expanded="false" aria-controls="collapse8th" c>
-                            I have a question related to hackathon which is not listed above. What
-                            should I do?
+                          <a
+                            rel="noreferrer"
+                            className="collapsed changecolor"
+                            data-toggle="collapse"
+                            data-parent="#accordion-right"
+                            href="#collapse8th"
+                            aria-expanded="false"
+                            aria-controls="collapse8th"
+                            c
+                          >
+                            I have a question related to hackathon which is not
+                            listed above. What should I do?
                           </a>
                         </h3>
                       </div>
-                      <div id="collapse8th" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div
+                        id="collapse8th"
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby="headingTwo"
+                      >
                         <div className="panel-body">
                           <p className="changecolor">
-                            Feel free to contact us. Just drop us a mail at teamfrosthack@gmail.com
-                            You can also contact one of our organizers.
+                            Feel free to contact us. Just drop us a mail at
+                            pc@students.iitmandi.ac.in You can also contact one
+                            of our organizers.
                           </p>
                         </div>
                       </div>
@@ -805,4 +891,4 @@ The ultimate goal is to create impactful solutions and cultivate a culture of in
       </div>
     </div>
   );
-}
+};

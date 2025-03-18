@@ -13,21 +13,20 @@ export const Navbar = (props) => {
   };
   window.addEventListener("resize", changeNavbar);
   /* Navbar style with Screenwidth */
-  
-  /* Mobile Navbar Onclick Function*/ 
+
+  /* Mobile Navbar Onclick Function*/
   const styleChange = (id) => {
     var elt = document.getElementById(id);
-    elt.style.display = ((elt.style.display === "block") ? "none" : "block");
+    elt.style.display = elt.style.display === "block" ? "none" : "block";
   };
   const showNavbar = () => {
     if (window.innerWidth > 767) {
-      return {"display":"block"}
+      return { display: "block" };
     } else {
-      return {"display":"none"}
-      
+      return { display: "none" };
     }
   };
-  /* Mobile Navbar Onclick Function*/ 
+  /* Mobile Navbar Onclick Function*/
 
   function stop() {
     document.getElementById("timeline").stop();
@@ -35,7 +34,6 @@ export const Navbar = (props) => {
   function strt() {
     document.getElementById("timeline").start();
   }
-
 
   return (
     <header id="header" className="transparent-navbar navTop">
@@ -79,8 +77,7 @@ export const Navbar = (props) => {
         {/* <!-- /navbar header --> */}
 
         {/* <!-- Navigation --> */}
-        <nav id="nav" style={showNavbar()}
-        >
+        <nav id="nav" style={showNavbar()}>
           <ul className="main-nav nav navbar-nav navbar-right">
             {/* <!-- <li><a href="#home">Top</a></li> --> */}
             <li>
@@ -100,20 +97,23 @@ export const Navbar = (props) => {
               </a>
             </li>
             <li>
-              <a id="3" href="./files/rulebook.pdf" target="_blank">
+              <a
+                id="3"
+                href="https://drive.google.com/file/d/1TnVb9g-SfrbhU-UMPQSlbYjxOdSX0KSi/view"
+                target="_blank"
+              >
                 Rulebook
               </a>
             </li>
-            <li>
-              <a id="3" href="https://drive.google.com/file/d/1Z-plS6Lnf29EV-ph3diEoqvIdABiklhQ/view?usp=drivesdk" target="_blank">
-                Themes
-              </a>
-            </li>
-            <li>
-              <a id="4" href="https://frosthack-2k23.devfolio.co/" target="_blank" >
+            {/* <li>
+              <a
+                id="4"
+                href="https://frosthack-2k23.devfolio.co/"
+                target="_blank"
+              >
                 Register
               </a>
-            </li>
+            </li> */}
             {/* <li><a id="4" href="/judges">Judges</a></li> */}
             {/* <li>
               <a id="5" href="/mentors">
